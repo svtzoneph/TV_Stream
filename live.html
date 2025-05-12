@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Live Stream</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    video {
+      width: 80%;
+      max-width: 800px;
+      border: 4px solid #f00;
+      border-radius: 10px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔴 Live Stream</h1>
+  <video id="video" controls autoplay muted></video>
+
+  <script>
+    const video = document.getElementById('video');
+    const videoSrc = 'http://192.168.1.10:8080/hls/stream.m3u8';
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = videoSrc;
+    } else {
+      alert("Your browser doesn't support HLS playback.");
+    }
+  </script>
+</body>
+</html>
