@@ -25,22 +25,29 @@
   </style>
 </head>
 <body>
-  <h1>🔴 Live Stream</h1>
-  <video id="video" controls autoplay muted></video>
+ <div style="max-width: 720px; margin: auto;">
+  <h2>Go Together Nana Tour Videos (iframe embed)</h2>
 
-  <script>
-    const video = document.getElementById('video');
-    const videoSrc = 'http://192.168.1.10:8080/hls/stream.m3u8';
+  <h3>Episode 1-5: Next Episode (1)</h3>
+  <iframe src="https://strtape.tech/e/0zPBrOpd86IbbZA/%5BFull%5D_Go_Together_Nana_Tour_Ep1-5._Next_Episode%281%29.mp4" 
+          width="100%" height="405" frameborder="0" allowfullscreen></iframe>
 
-    if (Hls.isSupported()) {
-      const hls = new Hls();
-      hls.loadSource(videoSrc);
-      hls.attachMedia(video);
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-      video.src = videoSrc;
-    } else {
-      alert("Your browser doesn't support HLS playback.");
-    }
-  </script>
+  <h3>Episode 1-1: Don't Let SEVENTEEN Know</h3>
+  <iframe src="https://strtape.tech/e/PZpzpBlgYvt00PR/%5BFULL%5D_Go_Together_NANA_TOUR_EP1-1._Don%27t_Let_SEVENTEEN_Know.mp4" 
+          width="100%" height="405" frameborder="0" allowfullscreen></iframe>
+
+  <h3>Episode 1-2: Off to Italy</h3>
+  <iframe src="https://strtape.tech/e/XW63yywML3HgdD/%5BFULL%5D_Go_Together_NANA_TOUR_EP1-2._Off_to_Italy.mp4" 
+          width="100%" height="405" frameborder="0" allowfullscreen></iframe>
+
+  <h3>Episode 1-3: First step of the travel</h3>
+  <iframe src="https://strtape.tech/e/xb9Aq3JQJwikkb1/%5BFULL%5D_Go_Together_NANA_TOUR_EP1-3._First_step_of_the_travel.mp4" 
+          width="100%" height="405" frameborder="0" allowfullscreen></iframe>
+
+  <h3>Episode 1-4: Something Happened in Their House</h3>
+  <iframe src="https://strtape.tech/e/jWXqBx6wKWu20V/%5BFULL%5D_Go_Together_NANA_TOUR_EP1-4._Something_Happened_in_Their_House.mp4" 
+          width="100%" height="405" frameborder="0" allowfullscreen></iframe>
+</div>
+
 </body>
 </html>
